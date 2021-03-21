@@ -1,0 +1,75 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "jest",
+    "flowtype"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "prettier/prettier": ["off"],
+    "quotes": ["error", "single"],
+    "semi": ["error"],
+    "comma-dangle": ["error", "never"],
+    "radix": ["error", "as-needed"],
+    "no-useless-catch": ["off"],
+    "multiline-ternary": ["off"],
+    "no-return-assign": ["off"],
+    "global-require": ["off"],
+    "max-len": ["error", { "code":  120, "tabWidth": 2 }],
+    "no-nested-ternary": ["off"],
+    "import/prefer-default-export": ["off"],
+    "import/no-cycle": ["off"],
+    "jsx-a11y/no-static-element-interactions": [
+      "error",
+      {
+        "handlers": [
+          "onClick",
+          "onMouseDown",
+          "onMouseUp",
+          "onKeyPress",
+          "onKeyDown",
+          "onKeyUp"
+        ]
+      }
+    ],
+    "react/destructuring-assignment": ["off"],
+    "react/prop-types": ["off"],
+    "react-hooks/exhaustive-deps": ["off"],
+    "react/require-default-props": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/explicit-module-boundary-types": ["off"],
+    "@typescript-eslint/ban-types": ["off"],
+    "@typescript-eslint/no-var-requires": ["off"]
+  }
+}
